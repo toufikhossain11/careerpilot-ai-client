@@ -1,0 +1,67 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        background: "#F8FAFC",
+        surface: "#FFFFFF",
+        "surface-muted": "#F1F5F9",
+        foreground: "#0F172A",
+        muted: "#64748B",
+        border: "#E2E8F0",
+        primary: "#4F46E5",
+        secondary: "#06B6D4",
+        accent: "#22C55E",
+        success: "#22C55E",
+        warning: "#F59E0B",
+        error: "#EF4444",
+        dark: "#0F172A",
+      },
+      fontFamily: {
+        sans: [
+          "var(--font-sans)",
+          "ui-sans-serif",
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "sans-serif",
+        ],
+        mono: [
+          "var(--font-mono)",
+          "ui-monospace",
+          "SFMono-Regular",
+          "Menlo",
+          "Monaco",
+          "Consolas",
+          "Liberation Mono",
+          "Courier New",
+          "monospace",
+        ],
+      },
+      fontSize: {
+        xs: ["0.75rem", { lineHeight: "1rem" }],
+        sm: ["0.875rem", { lineHeight: "1.25rem" }],
+        base: ["1rem", { lineHeight: "1.5rem" }],
+        lg: ["1.125rem", { lineHeight: "1.75rem" }],
+        xl: ["1.25rem", { lineHeight: "1.75rem" }],
+        "2xl": ["1.5rem", { lineHeight: "2rem" }],
+        "3xl": ["1.875rem", { lineHeight: "2.25rem" }],
+        "4xl": ["2.25rem", { lineHeight: "2.5rem" }],
+      },
+      borderRadius: {
+        sm: "0.5rem",
+        DEFAULT: "1rem",
+        lg: "1.5rem",
+        full: "9999px",
+      },
+      boxShadow: {
+        soft: "0 10px 30px -10px rgba(15, 23, 42, 0.12)",
+        card: "0 18px 60px -20px rgba(15, 23, 42, 0.15)",
+        focus: "0 0 0 4px rgba(79, 70, 229, 0.15)",
+      },
+    },
+  },
+  plugins: [],
+};

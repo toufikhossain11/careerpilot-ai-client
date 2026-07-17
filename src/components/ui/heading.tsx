@@ -7,10 +7,10 @@ interface HeadingProps {
 }
 
 const headingStyles: Record<NonNullable<HeadingProps["level"]>, string> = {
-  1: "text-4xl font-semibold tracking-tight text-slate-950 sm:text-5xl",
-  2: "text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl",
-  3: "text-2xl font-semibold tracking-tight text-slate-950 sm:text-3xl",
-  4: "text-xl font-semibold tracking-tight text-slate-950",
+  1: "text-4xl font-semibold tracking-tight text-[var(--foreground)] sm:text-5xl",
+  2: "text-3xl font-semibold tracking-tight text-[var(--foreground)] sm:text-4xl",
+  3: "text-2xl font-semibold tracking-tight text-[var(--foreground)] sm:text-3xl",
+  4: "text-xl font-semibold tracking-tight text-[var(--foreground)]",
 };
 
 export function Heading({
