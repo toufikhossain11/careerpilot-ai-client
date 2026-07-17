@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Providers } from "@/providers";
+import { Navbar } from "@/components/navbar";
 import { geistMono, geistSans } from "@/lib/fonts";
 import { siteConfig } from "@/constants/site";
 import "./globals.css";
@@ -34,7 +35,10 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-[var(--background)] font-sans text-[var(--foreground)] selection:bg-[rgba(79,70,229,0.18)] selection:text-[var(--foreground)] antialiased">
-        <Providers>{children}</Providers>
+        <Providers>
+          <Navbar />
+          {children}
+        </Providers>
       </body>
     </html>
   );
