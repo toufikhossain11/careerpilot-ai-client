@@ -5,6 +5,11 @@ import {
   CareerCategoriesSection,
   HowItWorksSection,
   StatisticsSection,
+  TestimonialsSection,
+  FAQSection,
+  NewsletterSection,
+  CTASection,
+  Footer,
 } from '@/features/home/components';
 
 export default function Home() {
@@ -27,6 +32,22 @@ export default function Home() {
 
       {/* Statistics Section */}
       <StatisticsSection />
+
+      {/* Testimonials / Success Stories Section */}
+      <TestimonialsSection />
+
+      {/* FAQ Section */}
+      <FAQSection />
+
+      {/* Newsletter Section */}
+      <NewsletterSection />
+
+      {/* Call to Action Section */}
+      <CTASection />
+
+      {/* Footer */}
+      <Footer />
     </main>
   );
 }
+

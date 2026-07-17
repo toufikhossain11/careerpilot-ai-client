@@ -8,14 +8,14 @@ import { Button } from "@/components/ui";
 
 const loggedOutLinks = [
   { label: "Home", href: "/" },
-  { label: "Explore Careers", href: "/explore-careers" },
+  { label: "Explore Careers", href: "/explore" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
 const loggedInLinks = [
   { label: "Home", href: "/" },
-  { label: "Explore Careers", href: "/explore-careers" },
+  { label: "Explore Careers", href: "/explore" },
   { label: "Dashboard", href: "/dashboard" },
   { label: "AI Assistant", href: "/ai-assistant" },
   { label: "Resume Analyzer", href: "/resume-analyzer" },
