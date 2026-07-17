@@ -4,7 +4,7 @@ import { siteConfig } from "@/constants/site";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Container className="flex min-h-screen flex-col justify-center py-20">
         <div className="mx-auto w-full max-w-5xl space-y-10">
           <section className="space-y-6 rounded-3xl border border-zinc-200/80 bg-white/90 p-10 shadow-sm shadow-zinc-950/5 ring-1 ring-zinc-900/5 backdrop-blur-xl">

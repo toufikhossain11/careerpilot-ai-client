@@ -2,60 +2,158 @@
 
 :root {
   color-scheme: light;
-  --background: #f8fafc;
-  --foreground: #0f172a;
-  --surface: #ffffff;
-  --surface-muted: #f1f5f9;
-  --border: #e2e8f0;
+  --background: #F8FAFC;
+  --surface: #FFFFFF;
+  --surface-muted: #F1F5F9;
+  --foreground: #0F172A;
+  --muted: #64748B;
+  --border: #E2E8F0;
+  --primary: #4F46E5;
+  --secondary: #06B6D4;
+  --accent: #22C55E;
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --error: #EF4444;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-mono);
-}
 
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
     --background: #020617;
-    --foreground: #e2e8f0;
-    --surface: #0f172a;
+    --surface: #0F172A;
     --surface-muted: #111827;
+    --foreground: #E2E8F0;
+    --muted: #94A3B8;
     --border: #334155;
   }
 }
 
-html {
-  scroll-behavior: smooth;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    min-height: 100%;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    min-height: 100%;
+    margin: 0;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-feature-settings: "cv02" 1, "cv03" 1, "cv04" 1;
+    line-height: 1.5;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  ::selection {
+    background: rgba(79, 70, 229, 0.18);
+    color: var(--foreground);
+  }
 }
 
-* {
-  box-sizing: border-box;
-}
+@layer utilities {
+  .page-container {
+    @apply mx-auto w-full max-w-[1280px] px-4 sm:px-6 lg:px-8;
+  }
 
-html,
-body {
-  min-height: 100%;
-}
+  .page-content {
+    @apply py-10 sm:py-12 lg:py-16;
+  }
 
-body {
-  margin: 0;
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  text-rendering: optimizeLegibility;
-}
+  .section-spacing {
+    @apply space-y-8;
+  }
 
-button,
-input,
-textarea,
-select {
-  font: inherit;
-}
+  .section-base {
+    @apply rounded-[1.25rem] p-8 ring-1 ring-slate-950/5;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.12);
+  }
 
-::selection {
-  background: rgb(148 163 184 / 0.35);
-  color: var(--foreground);
+  .card-base {
+    @apply rounded-[1.5rem] p-6 transition-transform duration-200 ease-out hover:-translate-y-1;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: 0 18px 60px -20px rgba(15, 23, 42, 0.15);
+  }
+
+  .card-lift {
+    @apply transition-transform duration-200 ease-out will-change-transform hover:-translate-y-1;
+  }
+
+  .badge-base {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em];
+  }
+
+  .badge-primary {
+    background: rgba(79, 70, 229, 0.1);
+    color: var(--primary);
+  }
+
+  .badge-secondary {
+    background: rgba(6, 182, 212, 0.1);
+    color: var(--secondary);
+  }
+
+  .badge-accent {
+    background: rgba(34, 197, 94, 0.12);
+    color: var(--accent);
+  }
+
+  .badge-muted {
+    background: var(--surface-muted);
+    color: var(--muted);
+  }
+
+  .input-base {
+    @apply w-full rounded-[1rem] px-4 py-3 text-base outline-none transition duration-200 ease-out placeholder:text-[var(--muted)];
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--foreground);
+  }
+
+  .input-base:focus-visible {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+  }
+
+  .input-disabled {
+    @apply cursor-not-allowed opacity-60;
+  }
+
+  .focus-ring {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.2);
+  }
+
+  .button-transition {
+    @apply transition duration-200 ease-out;
+  }
+
+  .fade-in {
+    @apply opacity-0 translate-y-2;
+    animation: fade-in 0.35s ease-out forwards;
+  }
+
+  @keyframes fade-in {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
