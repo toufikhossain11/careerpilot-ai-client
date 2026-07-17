@@ -4,16 +4,42 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Card, Badge, Button } from '@/components/ui';
 import Link from 'next/link';
-import { Star, Clock, MapPin, DollarSign, Bookmark, BookmarkCheck } from 'lucide-react';
+import {
+  Code2,
+  Database,
+  Layers,
+  Palette,
+  Settings,
+  Cpu,
+  Shield,
+  Smartphone,
+  Star,
+  Clock,
+  MapPin,
+  DollarSign,
+  Bookmark,
+  BookmarkCheck,
+} from 'lucide-react';
 import { type Career } from '../data/careers';
 
 interface CareerCardProps {
   career: Career;
 }
 
+const categoryIcons: Record<string, any> = {
+  Frontend: Code2,
+  Backend: Database,
+  'Full Stack': Layers,
+  'UI/UX': Palette,
+  DevOps: Settings,
+  AI: Cpu,
+  'Cyber Security': Shield,
+  Mobile: Smartphone,
+};
+
 export function CareerCard({ career }: CareerCardProps) {
   const [bookmarked, setBookmarked] = useState(false);
-  const Icon = career.icon;
+  const Icon = categoryIcons[career.category] || Code2;
 
   const formatSalary = (salary: number) => {
     return new Intl.NumberFormat('en-US', {

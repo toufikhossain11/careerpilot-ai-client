@@ -1,15 +1,3 @@
-import { 
-  Code2, 
-  Database, 
-  Layers, 
-  Palette, 
-  Settings, 
-  Cpu, 
-  Shield, 
-  Smartphone,
-  type LucideIcon 
-} from 'lucide-react';
-
 export interface Career {
   id: string;
   title: string;
@@ -22,7 +10,6 @@ export interface Career {
   duration: string; // duration of training/milestones
   location: string;
   workType: 'Remote' | 'Hybrid' | 'On-site';
-  icon: LucideIcon;
   gradient: string;
   isPopular?: boolean;
   dateAdded: string; // YYYY-MM-DD
@@ -41,7 +28,6 @@ export const careersData: Career[] = [
     duration: '2 years',
     location: 'San Francisco, CA',
     workType: 'Remote',
-    icon: Code2,
     gradient: 'from-blue-500 to-indigo-500',
     isPopular: true,
     dateAdded: '2026-05-15',
@@ -58,7 +44,6 @@ export const careersData: Career[] = [
     duration: '3 years',
     location: 'New York, NY',
     workType: 'Hybrid',
-    icon: Database,
     gradient: 'from-purple-500 to-pink-500',
     isPopular: true,
     dateAdded: '2026-06-01',
@@ -75,7 +60,6 @@ export const careersData: Career[] = [
     duration: '6 months',
     location: 'Chicago, IL',
     workType: 'On-site',
-    icon: Palette,
     gradient: 'from-orange-400 to-red-500',
     isPopular: false,
     dateAdded: '2026-07-01',
@@ -92,7 +76,6 @@ export const careersData: Career[] = [
     duration: '4 years',
     location: 'Seattle, WA',
     workType: 'Remote',
-    icon: Settings,
     gradient: 'from-emerald-400 to-teal-600',
     isPopular: true,
     dateAdded: '2026-04-10',
@@ -109,7 +92,6 @@ export const careersData: Career[] = [
     duration: '5 years',
     location: 'Boston, MA',
     workType: 'Hybrid',
-    icon: Cpu,
     gradient: 'from-cyan-400 to-blue-600',
     isPopular: true,
     dateAdded: '2026-06-20',
@@ -126,7 +108,6 @@ export const careersData: Career[] = [
     duration: '1.5 years',
     location: 'Washington, DC',
     workType: 'On-site',
-    icon: Shield,
     gradient: 'from-red-500 to-rose-600',
     isPopular: false,
     dateAdded: '2026-05-28',
@@ -143,7 +124,6 @@ export const careersData: Career[] = [
     duration: '2 years',
     location: 'Austin, TX',
     workType: 'Remote',
-    icon: Smartphone,
     gradient: 'from-pink-500 to-rose-500',
     isPopular: false,
     dateAdded: '2026-06-15',
@@ -160,7 +140,6 @@ export const careersData: Career[] = [
     duration: '2.5 years',
     location: 'Los Angeles, CA',
     workType: 'Hybrid',
-    icon: Layers,
     gradient: 'from-violet-500 to-purple-600',
     isPopular: true,
     dateAdded: '2026-07-10',
@@ -177,7 +156,6 @@ export const careersData: Career[] = [
     duration: '6 months',
     location: 'Denver, CO',
     workType: 'Remote',
-    icon: Code2,
     gradient: 'from-sky-400 to-indigo-400',
     isPopular: false,
     dateAdded: '2026-07-05',
@@ -194,7 +172,6 @@ export const careersData: Career[] = [
     duration: '4 years',
     location: 'Salt Lake City, UT',
     workType: 'Remote',
-    icon: Database,
     gradient: 'from-fuchsia-500 to-pink-600',
     isPopular: false,
     dateAdded: '2026-05-10',
@@ -211,7 +188,6 @@ export const careersData: Career[] = [
     duration: '3 years',
     location: 'Portland, OR',
     workType: 'Remote',
-    icon: Palette,
     gradient: 'from-amber-400 to-orange-500',
     isPopular: false,
     dateAdded: '2026-06-25',
@@ -228,7 +204,6 @@ export const careersData: Career[] = [
     duration: '2 years',
     location: 'Miami, FL',
     workType: 'Hybrid',
-    icon: Settings,
     gradient: 'from-teal-400 to-emerald-600',
     isPopular: false,
     dateAdded: '2026-06-18',
@@ -245,7 +220,6 @@ export const careersData: Career[] = [
     duration: '1 year',
     location: 'Remote (Global)',
     workType: 'Remote',
-    icon: Cpu,
     gradient: 'from-blue-400 to-cyan-500',
     isPopular: false,
     dateAdded: '2026-07-12',
@@ -262,7 +236,6 @@ export const careersData: Career[] = [
     duration: '3.5 years',
     location: 'Atlanta, GA',
     workType: 'Remote',
-    icon: Shield,
     gradient: 'from-rose-500 to-red-700',
     isPopular: true,
     dateAdded: '2026-05-05',
@@ -279,7 +252,6 @@ export const careersData: Career[] = [
     duration: '3 years',
     location: 'Cupertino, CA',
     workType: 'Hybrid',
-    icon: Smartphone,
     gradient: 'from-pink-600 to-purple-600',
     isPopular: false,
     dateAdded: '2026-06-08',
@@ -296,7 +268,6 @@ export const careersData: Career[] = [
     duration: '1 year',
     location: 'Dallas, TX',
     workType: 'On-site',
-    icon: Layers,
     gradient: 'from-indigo-400 to-violet-500',
     isPopular: false,
     dateAdded: '2026-07-14',

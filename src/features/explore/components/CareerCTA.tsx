@@ -36,7 +36,7 @@ export function CareerCTA() {
             >
               Start Learning
             </Button>
-            <Link href="/explore" passHref legacyBehavior>
+            <Link href="/explore" className="w-full sm:w-auto flex">
               <Button
                 variant="outline"
                 size="lg"
